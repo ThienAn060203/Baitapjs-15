@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tính Tiền Cáp</title>
+    <!-- <script>
+      function tinhTienCap() {
+        var loaiKhachHang = document.getElementById("loaiKhachHang").value;
+        var soKetNoi = parseInt(document.getElementById("soKetNoi").value, 10);
+        var soKenhCaoCap = parseInt(
+          document.getElementById("soKenhCaoCap").value,
+          10
+        );
+        var tongTien = 0;
+
+        if (loaiKhachHang === "nhaDan") {
+          tongTien = 4.5 + 20.5 + soKenhCaoCap * 7.5;
+        } else if (loaiKhachHang === "doanhNghiep") {
+          tongTien = 15;
+          if (soKetNoi <= 10) {
+            tongTien += 75;
+          } else {
+            tongTien += 75 + (soKetNoi - 10) * 5;
+          }
+          tongTien += soKenhCaoCap * 50;
+        }
+
+        document.getElementById("tongTien").textContent =
+          "Tổng tiền: $" + tongTien.toFixed(2);
+      }
+
+      function kiemTraLoaiKhachHang() {
+        var loaiKhachHang = document.getElementById("loaiKhachHang").value;
+        var inputSoKetNoi = document.getElementById("soKetNoi");
+
+        if (loaiKhachHang === "doanhNghiep") {
+          inputSoKetNoi.disabled = false;
+        } else {
+          inputSoKetNoi.disabled = true;
+          inputSoKetNoi.value = "";
+        }
+      }
+    </script> -->
+    <script>
+      function tinhTienCap() {
+        var loaiKhachHang = document.getElementById("loaiKhachHang").value;
+        var soKetNoi = parseInt(document.getElementById("soKetNoi").value, 10);
+        var soKenhCaoCap = parseInt(
+          document.getElementById("soKenhCaoCap").value,
+          10
+        );
+        var tongTien = 0;
+
+        if (loaiKhachHang === "nhaDan") {
+          tongTien = 4.5 + 20.5 + soKenhCaoCap * 7.5;
+        } else if (loaiKhachHang == "doanhNghiep") {
+          tongTien = 15;
+          if (soKetNoi <= 10) {
+            tongTien += 75;
+          } else {
+            tongTien += 75 + (soKetNoi - 10) * 5;
+          }
+          tongTien += soKenhCaoCap * 50;
+        }
+
+        document.getElementById("tongTien").textContent =
+          "Tổng tiền: $" + tongTien.toFixed(2);
+      }
+
+      function kiemTraLoaiKhachHang() {
+        var loaiKhachHang = document.getElementById("loaiKhachHang").value;
+        var inputSoKetNoi = document.getElementById("soKetNoi");
+
+        if (loaiKhachHang === "doanhNghiep") {
+          inputSoKetNoi.disabled = false;
+        } else {
+          inputSoKetNoi.disabled = true;
+          inputSoKetNoi.value = "";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- <h2>Tính Tiền Cáp</h2>
+
+    <form id="formTinhTienCap">
+      <label for="loaiKhachHang">Loại Khách Hàng:</label>
+      <select id="loaiKhachHang" onchange="kiemTraLoaiKhachHang()">
+        <option value="nhaDan">Nhà Dân</option>
+        <option value="doanhNghiep">Doanh Nghiệp</option></select
+      ><br /><br />
+
+      <label for="soKetNoi">Số Kết Nối:</label>
+      <input type="number" id="soKetNoi" disabled /><br /><br />
+
+      <label for="soKenhCaoCap">Số Kênh Cao Cấp:</label>
+      <input type="number" id="soKenhCaoCap" /><br /><br />
+
+      <input type="button" value="Tính Tiền" onclick="tinhTienCap()" />
+    </form>
+
+    <h3 id="tongTien">Tổng tiền: $0.00</h3> -->
+    <h2>Tính Tiền Cáp</h2>
+
+    <form id="formTinhTienCap">
+      <label for="loaiKhachHang">Loại Khách Hàng:</label>
+      <select id="loaiKhachHang" onchange="kiemTraLoaiKhachHang()">
+        <option value="nhaDan">Nhà Dân</option>
+        <option value="doanhNghiep">Doanh Nghiệp</option></select
+      ><br /><br />
+
+      <label for="soKetNoi">Số Kết Nối:</label>
+      <input type="number" id="soKetNoi" disabled /> <br /><br />
+
+      <label for="soKenhCaoCap">Số Kênh Cao Cấp:</label>
+      <input type="number" id="soKenhCaoCap" /><br /><br />
+
+      <input type="button" value="Tính Tiền" onclick="tinhTienCap()" />
+    </form>
+
+    <h3 id="tongTien">Tổng tiền: $0.00</h3>
+  </body>
+</html>
